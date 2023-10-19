@@ -43,7 +43,7 @@ async function run() {
         })
 
 
-        /* get single data using name */
+        /* get single data using id */
         app.get("/products/:id", async (req, res) => {
             const id = req.params.id
             
