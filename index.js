@@ -32,6 +32,7 @@ async function run() {
         await client.connect();
         /* create database and collection */
         const productCollection = client.db('productDB').collection('product')
+        const cartCollections = client.db('cartDB').collection('cart');
 
 
         /* post single data  */
@@ -41,7 +42,21 @@ async function run() {
            
             res.send(result);
         })
+      
+        /* single data post for cart ites */
+        app.post('/cart', async (req, res) => {
+            const cartItems = req.body
+            const result = await cartCollections.insertOne(cartItems)
+            res.send(result);
+        }
+        )
 
+        /* read data */
+        app.get('/cart', async (req, res) => {
+            const result = await cartCollections.find().toArray()
+
+            res.send(result);
+        })
 
         /* get single data using id */
         app.get("/products/:id", async (req, res) => {
