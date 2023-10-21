@@ -1,0 +1,38 @@
+[
+  {
+     "id": 1,
+    "brand_name": "Toyota",
+    "brand_logo": "https://i.ibb.co/d5FcgMy/toyota.jpg",
+    "description": "Toyota is known for its reliable and efficient vehicles, ranging from compact cars to SUVs and trucks. With a focus on quality and innovation, Toyota has become a global automotive leader."
+  },
+  {
+     "id": 2,
+    "brand_name": "Ford",
+    "brand_logo": "https://i.ibb.co/SPDtX9b/ford.png",
+    "description": "Ford is an American automotive icon, offering a wide range of vehicles, from classic Mustangs to rugged F-Series trucks. Ford's commitment to performance and innovation is well-known."
+  },
+  {
+     "id": 3,
+    "brand_name": "BMW",
+    "brand_logo": "https://i.ibb.co/Dt8ycN3/bmw-2-logo-png-transparent.png",
+    "description": "BMW, a German luxury brand, is synonymous with premium vehicles. Their cars are known for a blend of top-notch engineering, style, and cutting-edge technology."
+  },
+  {
+     "id": 4,
+    "brand_name": "Mercedes-Benz",
+    "brand_logo": "https://i.ibb.co/k1k95DZ/1200px-Mercedes-Benz-Logo-11.jpg",
+    "description": "Mercedes-Benz is a symbol of luxury and sophistication. They offer a range of high-end cars, from elegant sedans to powerful SUVs, setting high standards in the automotive world."
+  },
+  {
+     "id": 5,
+    "brand_name": "Tesla",
+    "brand_logo": "https://i.ibb.co/6yNTQS2/tesla-logo-free-download-free-vector.jpg",
+    "description": "Tesla is at the forefront of electric vehicle innovation. Known for their eco-friendly approach, Tesla produces electric cars that redefine the driving experience."
+  },
+  {
+     "id": 6,
+    "brand_name": "Honda",
+    "brand_logo": "https://i.ibb.co/xJxDpnn/honda-logo-honda-icon-free-free-vector.jpg",
+    "description": "Honda is known for its reliable and affordable vehicles. They produce a wide range of cars and motorcycles, delivering excellent performance and fuel efficiency."
+  }
+]

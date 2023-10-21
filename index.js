@@ -3,10 +3,18 @@ const cors = require('cors');
 const port = process.env.PORT || 5000
 const app = express()
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const brands = require('./brands.json')
 
 /* middleweres */
 app.use(express.json())
-app.use(cors())
+/* app.use(cors()) */
+const corsConfig = {
+    origin: '*',
+    credenttials: true,
+    methods : ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+}
+
+app.use(cors(corsConfig))
 
 /* username and pass */
 //alviasad10
@@ -29,7 +37,7 @@ const client = new MongoClient(uri, {
 async function run() {
     try {
       
-        await client.connect();
+        
         /* create database and collection */
         const productCollection = client.db('productDB').collection('product')
         const cartCollections = client.db('cartDB').collection('cart');
@@ -57,6 +65,16 @@ async function run() {
             const result = await cartCollections.find().toArray()
 
             res.send(result);
+        })
+
+        /* for brands */
+        app.get('/brands', (req, res) => {
+            res.send(brands)
+        })
+        app.get('/brands/:id', (req, res) => {
+            const id = parseInt(req.params.id);
+            const brand = brands.find(brand => brand.id === id) || {};
+            res.send(brand);
         })
 
 
@@ -127,8 +145,8 @@ async function run() {
             res.send(result);
         })
        
-        await client.db("admin").command({ ping: 1 });
-        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+        //  await client.db("admin").command({ ping: 1 });
+         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
 
 
